@@ -12,7 +12,8 @@
 #FROM mcr.microsoft.com/windows/servercore/insider:10.0.19035.1
 
 #Win11
-FROM mcr.microsoft.com/windows/servercore/insider:10.0.26244.5000
+# FROM mcr.microsoft.com/windows/servercore/insider:10.0.26085.1
+FROM mcr.microsoft.com/windows/servercore:10.0.20348.2762
 
 #input GitHub runner version argument
 ARG RUNNER_VERSION
@@ -20,7 +21,7 @@ ARG RUNNER_VERSION
 LABEL Author="Marcel L"
 LABEL Email="pwd9000@hotmail.co.uk"
 LABEL GitHub="https://github.com/Pwd9000-ML"
-LABEL BaseImage="servercore/insider:10.0.20348.1"
+LABEL BaseImage="servercore:10.0.20348.1"
 LABEL RunnerVersion=${RUNNER_VERSION}
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
